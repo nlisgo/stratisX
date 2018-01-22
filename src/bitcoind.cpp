@@ -7,6 +7,7 @@
 #include "rpcclient.h"
 #include "init.h"
 #include <boost/algorithm/string/predicate.hpp>
+#include <sodium.h>
 
 void WaitForShutdown(boost::thread_group* threadGroup)
 {
@@ -32,6 +33,8 @@ bool AppInit(int argc, char* argv[])
 {
     boost::thread_group threadGroup;
 
+   
+
     bool fRet = false;
     try
     {
@@ -50,12 +53,12 @@ bool AppInit(int argc, char* argv[])
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
             // First part of help message is specific to bitcoind / RPC client
-            std::string strUsage = _("Stratis version") + " " + FormatFullVersion() + "\n\n" +
+            std::string strUsage = _("Obsidian version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  stratisd [options]                     " + "\n" +
-                  "  stratisd [options] <command> [params]  " + _("Send command to -server or stratisd") + "\n" +
-                  "  stratisd [options] help                " + _("List commands") + "\n" +
-                  "  stratisd [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  obsidiand [options]                     " + "\n" +
+                  "  obsidiand [options] <command> [params]  " + _("Send command to -server or obsidiand") + "\n" +
+                  "  obsidiand [options] help                " + _("List commands") + "\n" +
+                  "  obsidiand [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage();
 
@@ -65,7 +68,7 @@ bool AppInit(int argc, char* argv[])
 
         // Command-line RPC
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "stratis:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "obsidian:"))
                 fCommandLine = true;
 
         if (fCommandLine)
@@ -129,6 +132,11 @@ int main(int argc, char* argv[])
     bool fRet = false;
     fHaveGUI = false;
 
+     if (sodium_init() == -1) {
+        fprintf(stdout, "error: libsodium sodium_init() returned -1\n");
+        return 1;
+    }
+    
     // Connect bitcoind signal handlers
     noui_connect();
 

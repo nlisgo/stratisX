@@ -97,7 +97,7 @@ xCXXFLAGS=-O2 $(EXT_OPTIONS) -pthread -Wall -Wextra -Wno-ignored-qualifiers -Wfo
 
 # LDFLAGS can be specified on the make command line, so we use xLDFLAGS that only
 # adds some defaults in front. Unfortunately, LDFLAGS=... $(LDFLAGS) does not work.
-xLDFLAGS=$(LDHARDENING) $(LDFLAGS)
+xLDFLAGS=$(LDHARDENING) $(LDFLAGS) -lsodium
 
 OBJS= \
     obj/alert.o \
@@ -134,21 +134,7 @@ OBJS= \
     obj/scrypt-arm.o \
     obj/scrypt-x86.o \
     obj/scrypt-x86_64.o \
-    obj/chainparams.o \
-    obj/x13hash/cubehash.o \
-    obj/x13hash/luffa.o \
-    obj/x13hash/aes_helper.o \
-    obj/x13hash/echo.o \
-    obj/x13hash/shavite.o \
-    obj/x13hash/simd.o \
-    obj/x13hash/blake.o\
-    obj/x13hash/bmw.o\
-    obj/x13hash/groestl.o\
-    obj/x13hash/jh.o\
-    obj/x13hash/keccak.o\
-    obj/x13hash/skein.o\
-    obj/x13hash/hamsi.o\
-	obj/x13hash/fugue.o
+    obj/chainparams.o
 
 ifeq (${USE_WALLET}, 1)
     DEFS += -DENABLE_WALLET
@@ -162,7 +148,7 @@ ifeq (${USE_WALLET}, 1)
         obj/walletdb.o
 endif
 
-all: stratisd
+all: obsidiand
 
 LIBS += $(CURDIR)/leveldb/libleveldb.a $(CURDIR)/leveldb/libmemenv.a
 DEFS += $(addprefix -I,$(CURDIR)/leveldb/include)
@@ -203,11 +189,11 @@ obj/%.o: %.c
 	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
 	  rm -f $(@:%.o=%.d)
 
-stratisd: $(OBJS:obj/%=obj/%)
+obsidiand: $(OBJS:obj/%=obj/%)
 	$(LINK) $(xCXXFLAGS) -o $@ $^ $(xLDFLAGS) $(LIBS)
 
 clean:
-	-rm -f stratisd
+	-rm -f obsidiand
 	-rm -f obj/*.o
 	-rm -f obj/*.P
 	-rm -f obj/build.h

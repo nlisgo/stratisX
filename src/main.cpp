@@ -22,7 +22,7 @@ using namespace std;
 using namespace boost;
 
 #if defined(NDEBUG)
-# error "Stratis cannot be compiled without assertions."
+# error "Obsidian cannot be compiled without assertions."
 #endif
 
 //
@@ -46,7 +46,7 @@ int nStakeMinConfirmations = 50;
 unsigned int nStakeMinAge = 60; // 8 hours
 unsigned int nModifierInterval = 10 * 60; // time to elapse before new modifier is computed
 
-int nCoinbaseMaturity = 50;
+int nCoinbaseMaturity = 50; // ObsidianMain 50
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 
@@ -77,7 +77,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Stratis Signed Message:\n";
+const string strMessageMagic = "Obsidian Signed Message:\n";
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -1003,7 +1003,7 @@ int64_t GetProofOfWorkReward(int64_t nFees)
 // miner's coin stake reward
 int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, int64_t nFees)
 {
-    return (1 * COIN) + nFees;
+    return (20 * COIN) + nFees; // Strais: (1 * COIN) + nFees; -> 0.5%, we have 10%
 }
 
 static const int64_t nTargetTimespan = 16 * 60;  // 16 mins
@@ -2649,7 +2649,7 @@ struct CImportingNow
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("stratis-loadblk");
+    RenameThread("obsidian-loadblk");
 
     CImportingNow imp;
 

@@ -3,19 +3,19 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Stratis</source>
-        <translation>Sobre Stratis</translation>
+        <source>About Obsidian</source>
+        <translation>Sobre Obsidian</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Stratis&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Stratis&lt;/b&gt; versión</translation>
+        <source>&lt;b&gt;Obsidian&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Obsidian&lt;/b&gt; versión</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
-Copyright © 2014 The Stratis developers</source>
+Copyright © 2014 The Obsidian developers</source>
         <translation>Copyright © 2009-2014 Los Desarrolladores Bitcoin
 Copyright © 2012-2014 Los Desarrolladores NovaCoin
 Copyright © 2014 Los Desarrolladores Bitcoin</translation>
@@ -65,8 +65,8 @@ Este producto incluye software desarrolado por el OpenSSL Project para el uso en
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your Stratis addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Estas son sus direcciones Stratis para recibir pagos. Usted debería compartir una dirección diferente por cada  persona que le envía, para mantener un registro de quien le esta pagando.</translation>
+        <source>These are your Obsidian addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Estas son sus direcciones Obsidian para recibir pagos. Usted debería compartir una dirección diferente por cada  persona que le envía, para mantener un registro de quien le esta pagando.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -80,8 +80,8 @@ Este producto incluye software desarrolado por el OpenSSL Project para el uso en
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a Stratis address</source>
-        <translation>Fírme un mensaje para probar que usted posee una dirección Stratis</translation>
+        <source>Sign a message to prove you own a Obsidian address</source>
+        <translation>Fírme un mensaje para probar que usted posee una dirección Obsidian</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -95,8 +95,8 @@ Este producto incluye software desarrolado por el OpenSSL Project para el uso en
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Stratis address</source>
-        <translation>Verifique un mensaje para asegurar que fue firmado con una dirección Stratis especificada</translation>
+        <source>Verify a message to ensure it was signed with a specified Obsidian address</source>
+        <translation>Verifique un mensaje para asegurar que fue firmado con una dirección Obsidian especificada</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -263,8 +263,8 @@ Este producto incluye software desarrolado por el OpenSSL Project para el uso en
     </message>
     <message>
         <location line="+82"/>
-        <source>Stratis will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Stratis se cerrará ahora para finalizar el proceso de encriptado. Recuerde que encriptar su billetera no puede completamente protegerlo de que sus monedas sean robadas por posible malware infectando su computadora.</translation>
+        <source>Obsidian will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>Obsidian se cerrará ahora para finalizar el proceso de encriptado. Recuerde que encriptar su billetera no puede completamente protegerlo de que sus monedas sean robadas por posible malware infectando su computadora.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -357,8 +357,8 @@ Este producto incluye software desarrolado por el OpenSSL Project para el uso en
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Stratis</source>
-        <translation>Mostrar información sobre Stratis</translation>
+        <source>Show information about Obsidian</source>
+        <translation>Mostrar información sobre Obsidian</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -397,13 +397,13 @@ Este producto incluye software desarrolado por el OpenSSL Project para el uso en
     </message>
     <message>
         <location line="-55"/>
-        <source>Send coins to a Stratis address</source>
-        <translation>Enviar monedas a una dirección Stratis</translation>
+        <source>Send coins to a Obsidian address</source>
+        <translation>Enviar monedas a una dirección Obsidian</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>Modify configuration options for Stratis</source>
-        <translation>Modificar opciones de configuración para Stratis</translation>
+        <source>Modify configuration options for Obsidian</source>
+        <translation>Modificar opciones de configuración para Obsidian</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -443,8 +443,8 @@ Este producto incluye software desarrolado por el OpenSSL Project para el uso en
     <message>
         <location line="-214"/>
         <location line="+555"/>
-        <source>Stratis</source>
-        <translation>Stratis</translation>
+        <source>Obsidian</source>
+        <translation>Obsidian</translation>
     </message>
     <message>
         <location line="-555"/>
@@ -453,8 +453,8 @@ Este producto incluye software desarrolado por el OpenSSL Project para el uso en
     </message>
     <message>
         <location line="+193"/>
-        <source>&amp;About Stratis</source>
-        <translation>&amp;Sobre Stratis</translation>
+        <source>&amp;About Obsidian</source>
+        <translation>&amp;Sobre Obsidian</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -505,13 +505,13 @@ Este producto incluye software desarrolado por el OpenSSL Project para el uso en
     <message>
         <location line="+0"/>
         <location line="+58"/>
-        <source>Stratis client</source>
-        <translation>Cliente Stratis</translation>
+        <source>Obsidian client</source>
+        <translation>Cliente Obsidian</translation>
     </message>
     <message numerus="yes">
         <location line="+70"/>
-        <source>%n active connection(s) to Stratis network</source>
-        <translation><numerusform>%n conexión activa a la red Stratis</numerusform><numerusform>%n conexiónes activas a la red Stratis</numerusform></translation>
+        <source>%n active connection(s) to Obsidian network</source>
+        <translation><numerusform>%n conexión activa a la red Obsidian</numerusform><numerusform>%n conexiónes activas a la red Obsidian</numerusform></translation>
     </message>
     <message>
         <location line="+488"/>
@@ -605,7 +605,7 @@ Dirección: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Stratis address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid Obsidian address or malformed URI parameters.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -728,7 +728,7 @@ Dirección: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+104"/>
-        <source>A fatal error occurred. Stratis can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. Obsidian can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1048,7 +1048,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Stratis address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid Obsidian address.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1067,7 +1067,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../guiutil.cpp" line="+426"/>
         <location line="+12"/>
-        <source>Stratis-Qt</source>
+        <source>Obsidian-Qt</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1140,12 +1140,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Stratis after logging in to the system.</source>
+        <source>Automatically start Obsidian after logging in to the system.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Stratis on system login</source>
+        <source>&amp;Start Obsidian on system login</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1155,7 +1155,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Stratis client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Obsidian client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1185,7 +1185,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-57"/>
-        <source>Connect to the Stratis network through a SOCKS5 proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the Obsidian network through a SOCKS5 proxy (e.g. when connecting through Tor).</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1230,7 +1230,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Stratis.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting Obsidian.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1297,7 +1297,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Stratis.</source>
+        <source>This setting will take effect after restarting Obsidian.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1316,7 +1316,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+46"/>
         <location line="+247"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Stratis network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Obsidian network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1390,7 +1390,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start stratis: click-to-pay handler</source>
+        <source>Cannot start obsidian: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1558,7 +1558,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Stratis-Qt help message to get a list with possible Stratis command-line options.</source>
+        <source>Show the Obsidian-Qt help message to get a list with possible Obsidian command-line options.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1578,12 +1578,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-104"/>
-        <source>Stratis - Debug window</source>
+        <source>Obsidian - Debug window</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
-        <source>Stratis Core</source>
+        <source>Obsidian Core</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1593,7 +1593,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Stratis debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the Obsidian debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1603,7 +1603,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="+325"/>
-        <source>Welcome to the Stratis RPC console.</source>
+        <source>Welcome to the Obsidian RPC console.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1784,7 +1784,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-174"/>
-        <source>Enter a Stratis address (e.g. SjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</source>
+        <source>Enter a Obsidian address (e.g. XjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1884,7 +1884,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+247"/>
-        <source>WARNING: Invalid Stratis address</source>
+        <source>WARNING: Invalid Obsidian address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1917,7 +1917,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. SjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</source>
+        <source>The address to send the payment to (e.g. XjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1958,7 +1958,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Stratis address (e.g. SjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</source>
+        <source>Enter a Obsidian address (e.g. XjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1982,7 +1982,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. SjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</source>
+        <source>The address to sign the message with (e.g. XjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2019,7 +2019,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Stratis address</source>
+        <source>Sign the message to prove you own this Obsidian address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2046,12 +2046,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. SjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</source>
+        <source>The address the message was signed with (e.g. XjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Stratis address</source>
+        <source>Verify the message to ensure it was signed with the specified Obsidian address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2062,7 +2062,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Stratis address (e.g. SjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</source>
+        <source>Enter a Obsidian address (e.g. XjBj1QvJvsAkU5EBKggdZ8gWc4oK2F5AMY)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2072,7 +2072,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Stratis signature</source>
+        <source>Enter Obsidian signature</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2651,7 +2651,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+171"/>
-        <source>Stratis version</source>
+        <source>Obsidian version</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2661,7 +2661,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to -server or stratisd</source>
+        <source>Send command to -server or obsidiand</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2681,12 +2681,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+2"/>
-        <source>Specify configuration file (default: stratis.conf)</source>
+        <source>Specify configuration file (default: obsidian.conf)</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify pid file (default: stratisd.pid)</source>
+        <source>Specify pid file (default: obsidiand.pid)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2704,13 +2704,13 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=stratisrpc
+rpcuser=obsidianrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Stratis Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Obsidian Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2726,7 +2726,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Stratis Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+5"/>
-        <source>Listen for connections on &lt;port&gt; (default: 16178 or testnet: 25714)</source>
+        <source>Listen for connections on &lt;port&gt; (default: 56660 or testnet: 25714)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2776,7 +2776,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Stratis Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+62"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 16174 or testnet: 25715)</source>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 56661 or testnet: 25715)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2816,7 +2816,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Stratis Alert&quot; admin@foo.
     </message>
     <message>
         <location line="-103"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Stratis will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Obsidian will not work properly.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3111,7 +3111,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Stratis Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+8"/>
-        <source>Initialization sanity check failed. Stratis is shutting down.</source>
+        <source>Initialization sanity check failed. Obsidian is shutting down.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3166,12 +3166,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Stratis Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+4"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Stratis</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of Obsidian</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Stratis to complete</source>
+        <source>Wallet needed to be rewritten: restart Obsidian to complete</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3231,7 +3231,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Stratis Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+124"/>
-        <source>Unable to bind to %s on this computer. Stratis is probably already running.</source>
+        <source>Unable to bind to %s on this computer. Obsidian is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3266,7 +3266,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Stratis Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Stratis is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Obsidian is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>

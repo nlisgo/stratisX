@@ -666,7 +666,7 @@ public:
 
     uint256 GetPoWHash() const
     {
-		return HashX13(BEGIN(nVersion), END(nNonce));
+		return ObsidianPoWHash(BEGIN(nVersion), END(nNonce));
     }
 
     int64_t GetBlockTime() const

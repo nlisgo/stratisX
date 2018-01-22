@@ -1,4 +1,4 @@
-Stratis-qt: Qt5 GUI for Stratis
+Obsidian-qt: Qt5 GUI for Obsidian
 ===============================
 
 Build instructions
@@ -24,9 +24,9 @@ then execute the following:
     qmake
     make
 
-Alternatively, install Qt Creator and open the `stratis-qt.pro` file.
+Alternatively, install Qt Creator and open the `obsidian-qt.pro` file.
 
-An executable named `stratis-qt` will be built.
+An executable named `obsidian-qt` will be built.
 
 
 Windows
@@ -69,7 +69,7 @@ Build configuration options
 UPNnP port forwarding
 ---------------------
 
-To use UPnP for port forwarding behind a NAT router (recommended, as more connections overall allow for a faster and more stable stratis experience), pass the following argument to qmake:
+To use UPnP for port forwarding behind a NAT router (recommended, as more connections overall allow for a faster and more stable obsidian experience), pass the following argument to qmake:
 
 ::
 
@@ -89,6 +89,15 @@ Set USE_UPNP to a different value to control this:
 +------------+--------------------------------------------------------------------------+
 | USE_UPNP=1 | build with UPnP support turned on by default at runtime.                 |
 +------------+--------------------------------------------------------------------------+
+
+Other macOS steps:
+PATH=/Users/theuser/Qt/5.9.1/clang_64/bin:$PATH
+export PATH
+effective qmake call from Qt Creator:
+qmake /Users/claus/ObsidianQt/obsidian-qt.pro -spec macx-clang CONFIG+=x86_64 RELEASE=1 USE_QRCODE=1 && /usr/bin/make qmake_all
+
+macdeployqt Obsidian-Qt.app -verbose=3 -dmg
+
 
 Notification support for recent (k)ubuntu versions
 ---------------------------------------------------
@@ -117,9 +126,9 @@ flag to qmake to control this:
 Berkely DB version warning
 ==========================
 
-A warning for people using the *static binary* version of Stratis on a Linux/UNIX-ish system (tl;dr: **Berkely DB databases are not forward compatible**).
+A warning for people using the *static binary* version of Obsidian on a Linux/UNIX-ish system (tl;dr: **Berkely DB databases are not forward compatible**).
 
-The static binary version of Stratis is linked against libdb 5.0 (see also `this Debian issue`_).
+The static binary version of Obsidian is linked against libdb 5.0 (see also `this Debian issue`_).
 
 Now the nasty thing is that databases from 5.X are not compatible with 4.X.
 
@@ -134,7 +143,7 @@ Ubuntu 11.10 warning
 ====================
 
 Ubuntu 11.10 has a package called 'qt-at-spi' installed by default.  At the time of writing, having that package
-installed causes stratis-qt to crash intermittently.  The issue has been reported as `launchpad bug 857790`_, but
+installed causes obsidian-qt to crash intermittently.  The issue has been reported as `launchpad bug 857790`_, but
 isn't yet fixed.
 
 Until the bug is fixed, you can remove the qt-at-spi package to work around the problem, though this will presumably

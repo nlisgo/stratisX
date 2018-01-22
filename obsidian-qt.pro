@@ -1,6 +1,6 @@
 TEMPLATE = app
-TARGET = stratis-qt
-VERSION = 2.0.0.3
+TARGET = Obsidian-Qt
+VERSION = 1.0.0.7
 INCLUDEPATH += src src/json src/qt
 QT += network
 DEFINES += ENABLE_WALLET
@@ -31,7 +31,7 @@ UI_DIR = build
 contains(RELEASE, 1) {
     # Mac: compile for maximum compatibility (10.5, 32-bit)
     macx:QMAKE_CXXFLAGS += -mmacosx-version-min=10.5 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.5.sdk
-
+    macx:QMAKE_MAC_SDK = macosx10.10
     !windows:!macx {
         # Linux: static link
         LIBS += -Wl,-Bstatic
@@ -228,36 +228,9 @@ HEADERS += src/qt/bitcoingui.h \
     src/netbase.h \
     src/clientversion.h \
     src/threadsafety.h \
-    src/tinyformat.h \
-    src/obj/x13hash/sph_blake.h \
-    src/obj/x13hash/sph_skein.h \
-    src/obj/x13hash/sph_keccak.h \
-    src/obj/x13hash/sph_jh.h \
-    src/obj/x13hash/sph_groestl.h \
-    src/obj/x13hash/sph_bmw.h \
-    src/obj/x13hash/sph_types.h \
-    src/obj/x13hash/sph_luffa.h \
-    src/obj/x13hash/sph_cubehash.h \
-    src/obj/x13hash/sph_echo.h \
-    src/obj/x13hash/sph_shavite.h \
-    src/obj/x13hash/sph_simd.h \
-    src/obj/x13hash/sph_hamsi.h \
-    src/obj/x13hash/sph_fugue.h
+    src/tinyformat.h
 
 SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
-    src/obj/x13hash/blake.c \
-    src/obj/x13hash/bmw.c \
-    src/obj/x13hash/groestl.c \
-    src/obj/x13hash/jh.c \
-    src/obj/x13hash/keccak.c \
-    src/obj/x13hash/skein.c \
-    src/obj/x13hash/luffa.c \
-    src/obj/x13hash/cubehash.c \
-    src/obj/x13hash/shavite.c \
-    src/obj/x13hash/echo.c \
-    src/obj/x13hash/simd.c \
-    src/obj/x13hash/hamsi.c \
-    src/obj/x13hash/fugue.c \
     src/qt/transactiontablemodel.cpp \
     src/qt/addresstablemodel.cpp \
     src/qt/optionsdialog.cpp \
@@ -429,8 +402,8 @@ macx:HEADERS += src/qt/macdockiconhandler.h src/qt/macnotificationhandler.h
 macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm src/qt/macnotificationhandler.mm
 macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
-macx:ICON = src/qt/res/icons/stratis.icns
-macx:TARGET = "Stratis-Qt"
+macx:ICON = src/qt/res/icons/obsidian.icns
+macx:TARGET = "Obsidian-Qt"
 macx:QMAKE_CFLAGS_THREAD += -pthread
 macx:QMAKE_LFLAGS_THREAD += -pthread
 macx:QMAKE_CXXFLAGS_THREAD += -pthread
@@ -441,9 +414,9 @@ INCLUDEPATH += $$BOOST_INCLUDE_PATH $$BDB_INCLUDE_PATH $$OPENSSL_INCLUDE_PATH $$
 LIBS += $$join(BOOST_LIB_PATH,,-L,) $$join(BDB_LIB_PATH,,-L,) $$join(OPENSSL_LIB_PATH,,-L,) $$join(QRENCODE_LIB_PATH,,-L,)
 LIBS += -lssl -lcrypto -ldb_cxx$$BDB_LIB_SUFFIX
 # -lgdi32 has to happen after -lcrypto (see  #681)
-windows:LIBS += -lws2_32 -lshlwapi -lmswsock -lole32 -loleaut32 -luuid -lgdi32
-LIBS += -lboost_system$$BOOST_LIB_SUFFIX -lboost_filesystem$$BOOST_LIB_SUFFIX -lboost_program_options$$BOOST_LIB_SUFFIX -lboost_thread$$BOOST_THREAD_LIB_SUFFIX
-windows:LIBS += -lboost_chrono$$BOOST_LIB_SUFFIX
+windows:LIBS += -lws2_32 -lshlwapi -lmswsock -lole32 -loleaut32 -luuid -lgdi32 -pthread
+LIBS += -lboost_system$$BOOST_LIB_SUFFIX -lboost_filesystem$$BOOST_LIB_SUFFIX -lboost_program_options$$BOOST_LIB_SUFFIX -lboost_thread$$BOOST_THREAD_LIB_SUFFIX -lsodium
+windows:LIBS += -lboost_chrono$$BOOST_LIB_SUFFIX -lsodium
 
 contains(RELEASE, 1) {
     !windows:!macx {
@@ -454,7 +427,7 @@ contains(RELEASE, 1) {
 
 !windows:!macx {
     DEFINES += LINUX
-    LIBS += -lrt -ldl -lz
+    LIBS += -lrt -ldl
 }
 
 system($$QMAKE_LRELEASE -silent $$_PRO_FILE_)

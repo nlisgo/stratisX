@@ -1,61 +1,70 @@
 #!/bin/bash
 
-set -e
-
-date
-ps axjf
 
 #################################################################
-# Update Ubuntu and install prerequisites for running Stratis   #
+# Define functions necessary for building Obsidian              #
+#################################################################
+
+cleandeps(){
+	rm -rf LATEST.tar.gz
+	rm -rf libsodium*
+}
+
+build(){
+	cd src
+	sudo chmod +x buildquick.sh
+	sudo ./buildquick.sh
+}
+
+init(){
+        mkdir -p ~/.obsidian && touch $_/obsidian.conf
+        config=~/.obsidian/obsidian.conf
+        echo "(Required) RPC User: "
+        read user
+        echo "rpcuser=$user" >> $config 
+        echo "(Required) RPC Password: "
+        unset password;
+        while IFS=$'\n' read -r -s -n1 pass; do
+          if [[ -z $pass ]]; then
+            echo
+            break
+          else
+            echo -n '*'
+            password+=$pass
+          fi
+        done
+        echo "rpcpassword=$password" >> $config
+        echo "(Optional) Email Address For Wallet Alerts: "
+        read email
+        echo "alertnotify=echo %s | mail -s 'Obsidian Alert' $email" >> $config
+}
+
+#################################################################
+# Update Ubuntu and install prerequisites for running Obsidian  #
 #################################################################
 sudo apt-get update
 #################################################################
-# Build Stratis from source                                     #
+# Build Obsidian from source                                    #
 #################################################################
 NPROC=$(nproc)
 echo "nproc: $NPROC"
 #################################################################
-# Install all necessary packages for building Stratis           #
+# Install all necessary packages for building Obsidian          #
 #################################################################
 sudo apt-get install -y qt4-qmake libqt4-dev libminiupnpc-dev libdb++-dev libdb-dev libcrypto++-dev libqrencode-dev libboost-all-dev build-essential libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libssl-dev ufw git
 sudo add-apt-repository -y ppa:bitcoin/bitcoin
 sudo apt-get update
 sudo apt-get install -y libdb4.8-dev libdb4.8++-dev
-
-cd /usr/local
-file=/usr/local/stratisX
-if [ ! -e "$file" ]
-then
-        sudo git clone https://github.com/stratisproject/stratisX.git
-fi
-
-cd /usr/local/stratisX/src
-file=/usr/local/stratisX/src/stratisd
-if [ ! -e "$file" ]
-then
-        sudo make -j$NPROC -f makefile.unix
-fi
-
-sudo cp /usr/local/stratisX/src/stratisd /usr/bin/stratisd
-
-################################################################
-# Configure to auto start at boot                                      #
-################################################################
-file=$HOME/.stratis
-if [ ! -e "$file" ]
-then
-        sudo mkdir $HOME/.stratis
-fi
-printf '%s\n%s\n%s\n%s\n' 'daemon=1' 'server=1' 'rpcuser=u' 'rpcpassword=p' | sudo tee $HOME/.stratis/stratis.conf
-file=/etc/init.d/stratis
-if [ ! -e "$file" ]
-then
-        printf '%s\n%s\n' '#!/bin/sh' 'sudo stratisd' | sudo tee /etc/init.d/stratis
-        sudo chmod +x /etc/init.d/stratis
-        sudo update-rc.d stratis defaults
-fi
-
-/usr/bin/stratisd
-echo "Stratis has been setup successfully and is running..."
-exit 0
-
+wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz 
+tar -xvzf LATEST.tar.gz 
+cd libsodium* 
+./configure 
+make
+make check 
+sudo make install 
+sudo ldconfig
+sudo apt-get install -y libsodium
+cd ..
+cleandeps
+init
+build
